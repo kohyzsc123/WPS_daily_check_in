@@ -21,7 +21,7 @@ mk = 0
 
 def request_re(sid, invite_userid, rep = 30):
     invite_url = 'http://zt.wps.cn/2018/clock_in/api/invite'
-    r = requests.post( invite_url, headers={ 'sid': sid }, data={ 'invite_userid': invite_userid, "client_code": "040ce6c23213494c8de9653e0074YX30", "client": "alipay" } )
+    r = requests.post( invite_url, headers={ 'sid': sid }, data={ 'invite_userid': invite_userid, "client_code": "041ey60w3HJZfW2Epg1w3QngH04ey60q", "client": "wechat" } )
     js = json.loads(r.content)
     if js['msg'] == 'tryLater' and rep > 0:
         rep -= 1
